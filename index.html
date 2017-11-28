@@ -59,6 +59,53 @@
 
   
     
+    <h3 class="article-title"><a href="/2017/11/28/Apache-设置-http-强制跳转-https/"><span>Apache 设置 http 强制跳转 https</span></a></h3>
+    
+  
+
+  <div class="article-top-meta">
+    <span class="posted-on">
+      <a href="/2017/11/28/Apache-设置-http-强制跳转-https/" rel="bookmark">
+        <time class="entry-date published" datetime="2017-11-28T07:18:20.000Z">
+          2017-11-28
+        </time>
+      </a>
+    </span>
+  </div>
+
+
+  
+
+  <div class="article-content">
+    <div class="entry">
+      
+        <p>##<br>配置如下，在 Apache 配置文件 httpd.conf 的 Directory 标签内加入以下代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">RewriteEngine on</span><br><span class="line">RewriteCond %&#123;SERVER_PORT&#125; !^443$</span><br><span class="line">RewriteRule ^(.*)?$ https://%&#123;SERVER_NAME&#125;/ [L,R]</span><br></pre></td></tr></table></figure></p>
+<p>然后保存并重启 Apache 即可。</p>
+
+      
+    </div>
+
+  </div>
+
+  <div class="article-footer">
+    <div class="article-meta pull-left">
+
+    
+
+    
+
+    </div>
+
+    
+  </div>
+</article>
+
+
+
+  <article>
+
+  
+    
     <h3 class="article-title"><a href="/2017/11/28/hello-world/"><span>Hello World</span></a></h3>
     
   
